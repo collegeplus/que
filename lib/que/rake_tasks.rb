@@ -8,6 +8,12 @@ namespace :que do
     Que.worker_count  = (ENV['QUE_WORKER_COUNT'] || 4).to_i
     Que.wake_interval = (ENV['QUE_WAKE_INTERVAL'] || 0.1).to_f
 
+    if ENV['BACKGROUND']
+      stay_in_current_dir = true
+      display_output = true
+      Process.daemon(stay_in_current_dir, display_output)
+    end
+
     # When changing how signals are caught, be sure to test the behavior with
     # the rake task in tasks/safe_shutdown.rb.
 
