@@ -1,3 +1,7 @@
+### 0.8.0 (2014-04-22)
+
+*   You can now run the rake task as a daemon process by setting the `BACKGROUND` environment varible. `BACKGROUND=yes rake que:work`
+
 ### 0.7.0 (2014-04-09)
 
 *   `JobClass.queue(*args)` has been deprecated and will be removed in version 1.0.0. Please use `JobClass.enqueue(*args)` instead.
