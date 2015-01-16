@@ -1,3 +1,8 @@
+
+### 0.8.1 (2015-01-16)
+
+*   Fix issue where daemon process wouldn't work.
+
 ### 0.8.0 (2014-04-22)
 
 *   You can now run the rake task as a daemon process by setting the `BACKGROUND` environment varible. `BACKGROUND=yes rake que:work`
